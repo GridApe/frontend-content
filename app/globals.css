@@ -1,76 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
- 
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
- 
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
- 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
- 
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
- 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
- 
-    --radius: 0.5rem;
-  }
- 
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
- 
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
- 
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
- 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
- 
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
- 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
- 
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
- 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
- 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-  }
-}
- 
 @layer base {
-  * {
-    @apply border-border;
+    h1 {
+      @apply text-3xl font-bold leading-[68px] tracking-[0.65px];
+      /* actual size 65px */
+    }
+    h2 {
+      @apply text-2xl font-semibold leading-[55px] tracking-[0.45px];
+          /* actual size 45px */
+    }
+    h3 {
+      @apply text-xl font-semibold leading-[55px] tracking-[0.35px];
+          /* actual size 30px */
+    }
+    h4 {
+      @apply text-lg font-normal leading-[48px] tracking-[0.3px];
+          /* actual size 35px */
+    }
+    h5 {
+      @apply text-lg font-normal leading-[48px] tracking-[0.15px];
+          /* actual size 15px */
+    }
   }
-  body {
-    @apply bg-background text-foreground;
+  
+  
+  
+  @layer components {
+    .btn-lg {
+    @apply inline-flex py-6 px-16 justify-center items-center rounded-[10px] border-[1px] gap-10;
+    }
+    .btn-md {
+    @apply inline-flex py-4 px-16 justify-center items-center rounded-[10px] border-[1px] gap-10;
+      }
+    .btn-sm {
+    @apply inline-flex py-3 md:py-4  px-3 md:px-10 justify-center items-center rounded-[10px] border-[1px] gap-5 md:gap-10;
+        }
+    .btn-xs {
+    @apply inline-flex py-2 px-3 md:px-6 justify-center items-center rounded-[10px] border-[1px] gap-5 md:gap-10;
+      }
   }
-}
+  
