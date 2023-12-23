@@ -8,9 +8,10 @@ const WhyGridApe = () => {
                 <div>
                     <h2 className='text-[#2E3192] mb-3 text-center md:text-left'>Why GridApe</h2>
                     <div className='px-2'>
-                       <p className='text-center md:text-justify mb-6 md:mb-10'>GridApe is at the forefront of revolutionizing email marketing. Our mission is to empower businesses to create impactful email campaigns effortlessly.</p>
+                       <p className="text-center md:text-justify mb-6 md:mb-10">GridApe is at the forefront of revolutionizing email marketing. Our mission is to empower businesses to create impactful email campaigns effortlessly.</p>
 
-                        <p className='text-center md:text-justify'>GridApe is not just a tool; it's your partner in crafting compelling narratives that resonate with your audience. Whether you're a seasoned marketer or just starting, GridApe simplifies the complex, making email marketing an enjoyable and effective experience.</p>
+                        <p className="text-center md:text-justify">GridApe is not just a tool.
+                         it is your partner in crafting compelling narratives that resonate with your audience. Whether you are a seasoned marketer or just starting, GridApe simplifies the complex, making email marketing an enjoyable and effective experience.</p>
 
                     </div>
                 </div>

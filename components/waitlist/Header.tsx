@@ -4,7 +4,7 @@ import Link from "next/link";
 import "../../app/globals.css";
 import { waitlistLinks } from "@/data/data";
 import MobileNav from "./MobileNav";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,16 +14,15 @@ const Header = () => {
     setIsOpen(!isOpen)
   }
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const scrollThreshold = 100;
     const currentScrollY = window.scrollY;
     const shouldHaveShadow = currentScrollY > scrollThreshold;
-
+  
     if (shouldHaveShadow !== hasShadow) {
       setHasShadow(shouldHaveShadow);
     }
-   
-  };
+  }, [hasShadow]);
 
 
   useEffect(() => {
@@ -31,7 +30,7 @@ const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [hasShadow]);
+  }, [handleScroll]);
 
 
   return (
