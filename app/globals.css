@@ -8,23 +8,23 @@
 
 @layer base {
     h1 {
-      @apply text-3xl font-bold leading-[68px] tracking-[0.65px];
+      @apply text-2xl sm:text-3xl md:text-5xl font-bold leading-8 md:leading-[64px] tracking-[0.65px];
       /* actual size 65px */
     }
     h2 {
-      @apply text-2xl font-semibold leading-[55px] tracking-[0.45px];
+      @apply text-2xl md:text-3xl font-bold leading-10 tracking-[0.45px];
           /* actual size 45px */
     }
     h3 {
-      @apply text-xl font-semibold leading-[55px] tracking-[0.35px];
+      @apply text-xl font-semibold leading-10 tracking-[0.35px];
           /* actual size 30px */
     }
     h4 {
-      @apply text-lg font-normal leading-[48px] tracking-[0.3px];
+      @apply text-lg font-normal leading-10 tracking-[0.3px];
           /* actual size 35px */
     }
     h5 {
-      @apply text-lg font-normal leading-[48px] tracking-[0.15px];
+      @apply text-lg font-normal leading-10 tracking-[0.15px];
           /* actual size 15px */
     }
   }

@@ -11,8 +11,8 @@ const Footer = () => {
           <Link href="mailto:info@gridape.com" className='hover:text-[#2E3192] whitespace-nowrap max-[640px]:text-sm'>Mail us at: infor@gridape.com</Link>
           <div className='flex gap-2 md:gap-5'>
             {footerSocialLinks.map((social, index) => (
-              <Link key={index} href={social.link} target='_blank'>
-                <Image src={social.name} width={35} height={35} alt='social icon' className='w-[25px] md:w-[35px] h-[25px] md:h-[35px]'/>
+              <Link key={index} href={social.link} target='_blank' rel="noopener noreferrer">
+                <Image src={social.name} width={35} height={35} alt='social icon' className='w-[25px] md:w-[35px] h-[25px] md:h-[35px] transition-transform hover:translate-y-2'/>
               </Link>
             ))}
           </div>

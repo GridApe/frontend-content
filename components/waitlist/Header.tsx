@@ -17,11 +17,13 @@ const Header = () => {
 
   const handleScroll = () => {
     const scrollThreshold = 100;
-    const shouldHaveShadow = window.scrollY > scrollThreshold;
+    const currentScrollY = window.scrollY;
+    const shouldHaveShadow = currentScrollY > scrollThreshold;
 
     if (shouldHaveShadow !== hasShadow) {
       setHasShadow(shouldHaveShadow);
     }
+   
   };
 
 
@@ -33,7 +35,7 @@ const Header = () => {
   }, [hasShadow]);
 
   return (
-    <header className={`w-full py-3 dark:bg-black flex justify-center bg-[#FFFAE9] transition-all duration-300 ${hasShadow ? 'fixed shadow-md' : ''}`}>
+    <header className={`w-full z-10 py-3 dark:bg-black flex justify-center bg-[#FFFAE9] transition-all duration-300 ${hasShadow ? 'fixed shadow-md' : ''}`}>
       <nav className="flex justify-between w-[95%] md:w-[85%] items-center dark:text-white">
         <Image src="/png/logo.png" alt="logo" width={60} height={60} loading="lazy" className="w-[60px] md:w-[80px] h-[60px] md:h-[80px]" />
         <ul className="hidden md:inline-flex items-center md:gap-x-[3rem] lg:gap-x-[8rem]">
