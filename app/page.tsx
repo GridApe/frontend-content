@@ -1,4 +1,5 @@
 import Hero from "@/components/waitlist/Hero";
+import WaitlistForm from "@/components/waitlist/WaitlistForm";
 import WhyGridApe from "@/components/waitlist/WhyGridApe";
 import React from "react"
 
@@ -7,6 +8,7 @@ const page = () => {
 		<>
 		<Hero />
 		<WhyGridApe/>
+		<WaitlistForm/>
 		<div>
 			<h1>JavaScript Frameworks - Heading into 2024</h1>
 

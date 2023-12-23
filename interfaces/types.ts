@@ -6,3 +6,10 @@ export interface WaitlistLink {
     isOpen: boolean;
     handleClick: () => void;
   }
+
+  export interface  bgStyle {
+    backgroundImage: string;
+    backgroundPosition: string;
+    backgroundSize: string;
+    backgroundRepeat: string;
+}
