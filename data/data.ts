@@ -1,6 +1,6 @@
 import { WaitlistLink } from "@/interfaces/types"
 export const waitlistLinks : WaitlistLink[] = [
-    { name: "Why GridApe", link: "#" },
+    { name: "Why GridApe", link: "#description" },
     { name: "FAQ", link: "#" },
     { name: "Terms & Conditions", link: "#" },
 ]

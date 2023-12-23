@@ -3,7 +3,7 @@ import React from 'react'
 
 const WhyGridApe = () => {
     return (
-        <section className='w-full py-10 mb-10 dark:bg-black flex justify-center'>
+        <section id='description' className='w-full py-10 mb-10 dark:bg-black flex justify-center'>
             <div className="flex  flex-col-reverse md:flex-row justify-between gap-10 md:gap-20 w-[95%] md:w-[85%] items-center  dark:text-white relative">
                 <div>
                     <h2 className='text-[#2E3192] mb-3 text-center md:text-left'>Why GridApe</h2>
@@ -17,6 +17,8 @@ const WhyGridApe = () => {
                 <div>
                     <Image src="/svg/whygridape.svg" alt='why grid ape' width={1200} height={100} />
                 </div>
+                <Image src="/svg/puzzle1.svg" alt='puzzle' width={50} height={50} className='absolute left-0 -bottom-2 hidden md:block -z-10' />
+                <Image src="/svg/puzzle1.svg" alt='puzzle' width={50} height={50} className='absolute left-60 -bottom-5 hidden md:block -z-10' />
             </div>
         </section>
     )
