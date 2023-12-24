@@ -1,4 +1,4 @@
-import FAQ from "@/components/waitlist/FAQ";
+import FAQ from "@/components/waitlist/FAQ/FAQ";
 import Hero from "@/components/waitlist/Hero";
 import WaitlistForm from "@/components/waitlist/WaitlistForm";
 import WhyGridApe from "@/components/waitlist/WhyGridApe";
