@@ -13,3 +13,8 @@ export interface WaitlistLink {
     backgroundSize: string;
     backgroundRepeat: string;
 }
+
+export interface FAQItem {
+  title: string;
+  content: string;
+}

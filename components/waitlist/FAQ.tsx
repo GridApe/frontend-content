@@ -1,35 +1,37 @@
 "use client"
 import React, { useState } from 'react';
+import FAQItem from './FAQItem';
+import { faqData } from '@/data/data';
 
-const faqData = [
-    {
-        question: "What services does tifi.tv offer?",
-        answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
-    },
-    {
-        question: "What services does tifi.tv offer?",
-        answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
-    },
-    {
-        question: "What services does tifi.tv offer?",
-        answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
-    },
-];
 
-function FAQ() {
-    const [openIndex, setOpenIndex] = useState(null);
 
-    const toggleAccordion = ({ index }: any) => {
-        setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
-    };
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-    return (
-        <div className="w-full flex justify-center mt-20">
-            <div className="w-[95%] md:w-[85%] dark:text-white">
-            <h2 className="w-full text-3xl md:text-4xl text-center mb-4">Frequently Asked Questions</h2>
-            </div>
-        </div>
-    );
-}
+  const handleToggle = (index: number) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+
+  return (
+    <div className="container mt-10 dark:bg-black flex justify-center">
+    <div className="mt-10 w-[95%] md:w-[60%] dark:text-white relative">
+      <h2 className="text-center">Frequently Asked Questions</h2>
+      <h6 className="font-bold text-[#2E3192] inline">What is GridApe?</h6>
+      <div className="accordion">
+        {faqData.map((item, index) => (
+          <FAQItem
+            key={index}
+            title={item.title}
+            content={item.content}
+            isOpen={index === openIndex}
+            onClick={() => handleToggle(index)}
+          />
+        ))}
+      </div>
+      </div>
+    </div>
+  );
+};
 
 export default FAQ;
