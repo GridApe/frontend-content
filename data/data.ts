@@ -13,23 +13,15 @@ export const footerSocialLinks: WaitlistLink[] = [
 
 export const faqData: FAQItem[] = [
   {
-    title: 'Why is the moon sometimes out during the day?',
+    title: 'How does GrideApe work?',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
   },
   {
-    title: 'Why is the sky blue?',
+    title: 'Is my personal information safe when i join the waitlist for GridApe?',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
   },
   {
-    title: 'Why is the sky blue?',
+    title: 'Can i unsubscribe from the waitlist for GrideApe?',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
-  },
-  {
-    title: 'Why is the moon sometimes out during the day?',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
-  },
-  {
-    title: 'Why is the sky blue?',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
-  },
+  }
 ];
