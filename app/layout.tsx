@@ -1,11 +1,21 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import localFont from 'next/font/local';
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import Header from '@/components/waitlist/Header'
 import Footer from '@/components/waitlist/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const clash = localFont({
+  src: [
+    {
+      path: '../public/fonts/ClashGrotesk-Variable.woff2',
+      weight: '200, 700',
+    }
+  ],
+});
 
 export const metadata: Metadata = {
   title: 'GridApe',
@@ -19,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning >
-      <body className={`bg-[#FFFAE9] ${inter.className}`}>
+      <body className={`bg-[#FFFAE9] ${clash.className}`}>
         {/* <ThemeProvider
             attribute="class"
             defaultTheme="system"
