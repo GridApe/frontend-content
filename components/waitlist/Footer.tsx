@@ -1,9 +1,13 @@
+"use client"
+// Import necessary dependencies and components
 import { footerSocialLinks } from '@/data/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
+// Functional component for the Footer
 const Footer = () => {
+  // TSX structure for the Footer component
   return (
     <footer className=''>
       <div className="w-full py-10 px-2 mb-10 dark:bg-black flex justify-center">
@@ -22,4 +26,5 @@ const Footer = () => {
   )
 }
 
+// Export the Footer component as the default export
 export default Footer;

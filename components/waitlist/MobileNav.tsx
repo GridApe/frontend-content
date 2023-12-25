@@ -1,12 +1,14 @@
 "use client"
+// Import necessary dependencies and components
 import React from 'react'
 import { HambergerMenu } from "iconsax-react";
 import { waitlistLinks } from '@/data/data';
 import Link from 'next/link';
 import { MobileNavProps } from '@/interfaces/types';
 
-
+// Functional component for the MobileNav
 const MobileNav: React.FC<MobileNavProps> = ({ isOpen, handleClick }) => {
+    // TSX structure for the MobileNav component
     return (
         <div className='relative md:hidden mobile-nav-container'>
             <div className={`${isOpen ? 'bg-[#2E3192] text-white' : 'bg-white text-black'} rounded-[10px]  shadow-md p-2 cursor-pointer`}>
@@ -29,4 +31,5 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, handleClick }) => {
     )
 }
 
-export default MobileNav
+// Export the MobileNav component as the default export
+export default MobileNav;

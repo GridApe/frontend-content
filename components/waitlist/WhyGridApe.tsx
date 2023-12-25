@@ -1,11 +1,13 @@
 "use client"
+// Import necessary dependencies and components
 import Image from 'next/image';
 import React, { useEffect } from 'react'
 import AOS from 'aos';
 import "aos/dist/aos.css"
 
-
+// Functional component for the WhyGridApe section
 const WhyGridApe = () => {
+    // Initialize AOS library on component mount
     useEffect(() => {
         AOS.init({
           duration: 800,
@@ -13,6 +15,7 @@ const WhyGridApe = () => {
         });
       }, []);
 
+    // TSX structure for the WhyGridApe component
     return (
         <section id='description' className='w-full py-10 mb-10 dark:bg-black flex justify-center'>
             <div className="flex  flex-col-reverse md:flex-row justify-between gap-10 md:gap-20 w-[95%] md:w-[85%] items-center  dark:text-white relative">
@@ -36,4 +39,5 @@ const WhyGridApe = () => {
     )
 }
 
+// Export the WhyGridApe component as the default export
 export default WhyGridApe;

@@ -1,4 +1,5 @@
 "use client"
+// Import necessary dependencies and components
 import Image from "next/image";
 import Link from "next/link";
 import "../../app/globals.css";
@@ -6,15 +7,19 @@ import { waitlistLinks } from "@/data/data";
 import MobileNav from "./MobileNav";
 import { useCallback, useEffect, useState } from "react";
 
-
+// Functional component for the Header
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  // State for managing mobile navigation
+  const [isOpen, setIsOpen] = useState(false);
+  // State for managing header shadow based on scroll position
   const [hasShadow, setHasShadow] = useState(false);
 
+  // Function to toggle mobile navigation
   const handleOpen = () => {
     setIsOpen(!isOpen)
   }
 
+  // Function to handle scroll and update header shadow
   const handleScroll = useCallback(() => {
     const scrollThreshold = 100;
     const currentScrollY = window.scrollY;
@@ -25,8 +30,9 @@ const Header = () => {
     }
   }, [hasShadow]);
 
+  // Function to handle body click and close mobile navigation if clicked outside
   const handleBodyClick = useCallback(
-    (e : any) => {
+    (e: any) => {
       if (isOpen && !e.target.closest(".mobile-nav-container")) {
         setIsOpen(false);
       }
@@ -34,7 +40,7 @@ const Header = () => {
     [isOpen]
   );
 
-
+  // Effect to add event listeners for scroll and body click
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     document.body.addEventListener("click", handleBodyClick);
@@ -44,7 +50,7 @@ const Header = () => {
     };
   }, [handleScroll, handleBodyClick]);
 
-
+  // TSX structure for the Header component
   return (
     <header className={`w-full fixed z-50 py-3 dark:bg-black t0p-0 left-0 right-0 flex justify-center bg-[#FFFAE9] transition-transform duration-300 ease-in-out
      ${hasShadow ? 'shadow-md' : ''}`}>
@@ -82,4 +88,5 @@ const Header = () => {
   )
 }
 
+// Export the Header component as the default export
 export default Header;

@@ -1,7 +1,11 @@
+"use client"
+// Import necessary dependencies and components
 import Image from 'next/image';
 import React from 'react'
 
+// Functional component for the Hero section
 const Hero = () => {
+    // TSX structure for the Hero component
     return (
         <section className='w-full py-10 mb-2 md:mb-10 dark:bg-black flex justify-center'>
             <div className="flex flex-col justify-center w-[95%] md:w-[85%] items-center  dark:text-white relative">
@@ -24,4 +28,5 @@ const Hero = () => {
     )
 }
 
+// Export the Hero component as the default export
 export default Hero;

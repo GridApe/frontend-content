@@ -1,4 +1,5 @@
 "use client"
+// Import necessary dependencies and components
 import React, { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
@@ -8,12 +9,16 @@ import "aos/dist/aos.css"
 import * as z from "zod";
 import { toast } from 'react-hot-toast';
 
-
+// Define email schema using zod for validation
 const emailSchema = z.string().email('Must be a valid email address');
+
+// Functional component for the WaitlistForm
 const WaitlistForm = () => {
+  // State for storing email and error message
   const [email, setEmail] = useState('');
   const [errorMessage, setErrorMessage] = useState(null);
 
+  // Background style for the form section
   const BgStyle: bgStyle = {
     backgroundImage: "url('/svg/chair.svg')",
     backgroundPosition: "center",
@@ -21,6 +26,7 @@ const WaitlistForm = () => {
     backgroundRepeat: "no-repeat",
   };
 
+  // Initialize AOS library on component mount
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -28,25 +34,31 @@ const WaitlistForm = () => {
     });
   }, []);
 
+  // Handle input change
   const handleChange = (e: any) => {
     setEmail(e.target.value);
     setErrorMessage(null);
   };
 
+  // Handle form submission
   const handleSubmit = (e: any) => {
     e.preventDefault();
     try {
+      // Validate email using the defined schema
       emailSchema.parse(email);
+      // Display success message and clear email after a delay
       toast.success("Waitlist joined successfully")
       setTimeout(() => {
         setEmail("")
       }, 100)
     } catch (error: any) {
+      // Display error message if validation fails
       setErrorMessage(error.issues[0].message);
       toast.error(error.issues[0].message)
     }
   };
 
+  // TSX structure for the WaitlistForm component
   return (
     <section id='waitlist' className='w-full flex justify-center' data-aos="fade-up">
       <div className="rounded-t-[40px] md:rounded-t-[80px] w-[95%] md:w-[85%]  bg-[#212360]  dark:text-white relative" style={BgStyle}>
@@ -62,6 +74,7 @@ const WaitlistForm = () => {
               <Button className='py-6 bg-[#00C165] hover:bg-[#01CE6C] text-white border-[1px]' type='submit'>Notify me</Button>
               <Input
                 className={`focus:outline-none focus:border-none focus:ring-4 py-6 ${errorMessage ? 'border-red-500 border-[1px]' : ''}`}
+                type='email'
                 placeholder='Enter your email here'
                 value={email}
                 onChange={handleChange} />
@@ -73,4 +86,5 @@ const WaitlistForm = () => {
   );
 }
 
+// Export the WaitlistForm component as the default export
 export default WaitlistForm;
