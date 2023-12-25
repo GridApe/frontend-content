@@ -3,6 +3,8 @@ import Hero from "@/components/waitlist/Hero";
 import WaitlistForm from "@/components/waitlist/WaitlistForm";
 import WhyGridApe from "@/components/waitlist/WhyGridApe";
 import React from "react"
+import './globals.css'
+
 
 const page = () => {
 	return (

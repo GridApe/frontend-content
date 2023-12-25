@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import Header from '@/components/waitlist/Header'
 import Footer from '@/components/waitlist/Footer'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 const clash = localFont({
