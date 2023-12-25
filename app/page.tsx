@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import FAQ from "@/components/waitlist/FAQ/FAQ";
 import Hero from "@/components/waitlist/Hero";
 import WaitlistForm from "@/components/waitlist/WaitlistForm";
@@ -8,7 +8,7 @@ import './globals.css'
 import Loader from "@/components/Loader";
 
 
-const page = () => {
+const Page = () => {
 	const [isLoading, setIsLoading] = useState<Boolean>(true)
 	
 	useEffect(() => {
@@ -31,4 +31,4 @@ const page = () => {
 	)
 }
 
-export default page;
+export default Page;
