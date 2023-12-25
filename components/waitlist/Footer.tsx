@@ -8,7 +8,7 @@ const Footer = () => {
     <footer>
       <div className="w-full py-10 mb-10 dark:bg-black flex justify-center">
         <div className="flex justify-between w-[95%] md:w-[85%] items-center dark:text-white">
-          <Link href="mailto:info@gridape.com" className='hover:text-[#2E3192] whitespace-nowrap max-[640px]:text-sm'>Mail us at: infor@gridape.com</Link>
+          <Link href="mailto:info@gridape.com" className='hover:text-[#2E3192] whitespace-nowrap max-[640px]:text-sm'>Mail us at: info@gridape.com</Link>
           <div className='flex gap-2 md:gap-5'>
             {footerSocialLinks.map((social, index) => (
               <Link key={index} href={social.link} target='_blank' rel="noopener noreferrer">

@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <section className='w-full py-10 mb-2 md:mb-10 dark:bg-black flex justify-center'>
             <div className="flex flex-col justify-center w-[95%] md:w-[85%] items-center  dark:text-white relative">
-                <div className='heading'>
+                <div className='heading mt-20'>
                     <h1 className='text-center whitespace-nowrap'>
                         The ultimate platform for <br />
                         <span className='text-[#2E3192]'>elevating</span> your email <br />

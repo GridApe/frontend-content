@@ -1,7 +1,10 @@
-import React from 'react';
+"use client"
+import React, { useEffect } from 'react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { bgStyle } from '@/interfaces/types';
+import AOS from 'aos';
+import "aos/dist/aos.css"
 
 const WaitlistForm = () => {
   const BgStyle: bgStyle = {
@@ -11,8 +14,15 @@ const WaitlistForm = () => {
     backgroundRepeat: "no-repeat",
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+    });
+  }, []);
+
   return (
-    <section id='waitlist' className='w-full flex justify-center'>
+    <section id='waitlist' className='w-full flex justify-center' data-aos="fade-right">
       <div className="rounded-t-[40px] md:rounded-t-[80px] w-[95%] md:w-[85%]  bg-[#212360]  dark:text-white relative" style={BgStyle}>
         <div className='absolute w-full h-full bg-[#212360] bg-opacity-60 rounded-t-[40px] md:rounded-t-[80px] z-10'></div>
         <div className='my-10 md:my-60 relative z-20'>
