@@ -47,6 +47,6 @@
   }
   
   body {
-    overflow-x: hidden;
     scroll-behavior: smooth;
   }
+  body>div {overflow-x:hidden!important;}

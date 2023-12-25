@@ -24,7 +24,7 @@ const WaitlistForm = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: 'ease-in-out',
+      easing: 'linear',
     });
   }, []);
 
@@ -48,7 +48,7 @@ const WaitlistForm = () => {
   };
 
   return (
-    <section id='waitlist' className='w-full overflow-x-hidden flex justify-center' data-aos="fade-left">
+    <section id='waitlist' className='w-full flex justify-center' data-aos="fade-up">
       <div className="rounded-t-[40px] md:rounded-t-[80px] w-[95%] md:w-[85%]  bg-[#212360]  dark:text-white relative" style={BgStyle}>
         <div className='absolute w-full h-full bg-[#212360] bg-opacity-60 rounded-t-[40px] md:rounded-t-[80px] z-10'></div>
         <div className='my-10 md:my-60 relative z-20'>

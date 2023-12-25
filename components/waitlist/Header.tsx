@@ -4,14 +4,13 @@ import Link from "next/link";
 import "../../app/globals.css";
 import { waitlistLinks } from "@/data/data";
 import MobileNav from "./MobileNav";
-import { useCallback, useEffect,  useState } from "react";
-
+import { useCallback, useEffect, useState } from "react";
 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [hasShadow, setHasShadow] = useState(false);
- 
+
   const handleOpen = () => {
     setIsOpen(!isOpen)
   }
@@ -20,19 +19,30 @@ const Header = () => {
     const scrollThreshold = 100;
     const currentScrollY = window.scrollY;
     const shouldHaveShadow = currentScrollY > scrollThreshold;
-  
+
     if (shouldHaveShadow !== hasShadow) {
       setHasShadow(shouldHaveShadow);
     }
   }, [hasShadow]);
 
+  const handleBodyClick = useCallback(
+    (e : any) => {
+      if (isOpen && !e.target.closest(".mobile-nav-container")) {
+        setIsOpen(false);
+      }
+    },
+    [isOpen]
+  );
+
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    document.body.addEventListener("click", handleBodyClick);
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      document.body.removeEventListener("click", handleBodyClick);
     };
-  }, [handleScroll]);
+  }, [handleScroll, handleBodyClick]);
 
 
   return (
@@ -41,17 +51,31 @@ const Header = () => {
       <nav className="flex justify-between w-[95%] md:w-[85%] items-center dark:text-white">
         <Image src="/png/logo.png" alt="logo" width={60} height={60} loading="lazy" className="w-[60px] md:w-[80px] h-[60px] md:h-[80px]" />
         <ul className="hidden md:inline-flex items-center md:gap-x-[3rem] lg:gap-x-[8rem]">
-        {waitlistLinks.map((link, index) => (
-        <li key={index} className="transition duration-300 delay-100 hover:text-[#2E3192] whitespace-nowrap">
-          <Link href={link.link} prefetch>
-            {link.name}
-          </Link>
-        </li>
-      ))}
+          {waitlistLinks.map((link, index) => (
+            <li key={index} className="transition duration-300 delay-100 hover:text-[#2E3192] whitespace-nowrap">
+              <Link href={link.link} prefetch scroll={false}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(link.id)?.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                }}>
+                {link.name}
+              </Link>
+            </li>
+          ))}
         </ul>
         <div className="flex items-center gap-5 md:gap-10">
-        <Link href="#waitlist" className="btn-sm bg-[#2E3192] text-white whitespace-nowrap">Join our waitlist</Link>
-        <MobileNav isOpen={isOpen} handleClick={handleOpen}/>
+          <Link href="#waitlist" className="btn-sm bg-[#2E3192] text-white whitespace-nowrap"
+            scroll={false}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('waitlist')?.scrollIntoView({
+                behavior: 'smooth',
+              });
+            }}
+          >Join our waitlist</Link>
+          <MobileNav isOpen={isOpen} handleClick={handleOpen} />
         </div>
       </nav>
     </header>

@@ -8,7 +8,7 @@ import { MobileNavProps } from '@/interfaces/types';
 
 const MobileNav: React.FC<MobileNavProps> = ({ isOpen, handleClick }) => {
     return (
-        <div className='relative md:hidden'>
+        <div className='relative md:hidden mobile-nav-container'>
             <div className={`${isOpen ? 'bg-[#2E3192] text-white' : 'bg-white text-black'} rounded-[10px]  shadow-md p-2 cursor-pointer`}>
                 <HambergerMenu size="32" onClick={handleClick} />
             </div>

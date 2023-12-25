@@ -35,8 +35,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning >
-      <body className={`bg-[#FFFAE9] ${clash.className}`} style={{overflowX: 'hidden'}}>
-      <Toaster position="bottom-right" reverseOrder={false} />
+      <body className={`bg-[#FFFAE9] ${clash.className}`}>
+      <Toaster position="top-right" reverseOrder={false} />
         {/* <ThemeProvider
             attribute="class"
             defaultTheme="system"

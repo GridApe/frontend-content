@@ -4,7 +4,6 @@ import Hero from "@/components/waitlist/Hero";
 import WaitlistForm from "@/components/waitlist/WaitlistForm";
 import WhyGridApe from "@/components/waitlist/WhyGridApe";
 import React, { useEffect, useState } from "react"
-import './globals.css'
 import Loader from "@/components/Loader";
 
 

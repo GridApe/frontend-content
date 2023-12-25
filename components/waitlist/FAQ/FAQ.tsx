@@ -22,9 +22,10 @@ const FAQ = () => {
   }, []);
 
   return (
-    <div className="container overflow-x-hidden mt-10 mb-5 dark:bg-black flex justify-center" id='faq'>
+    <div className="container  mt-10 mb-5 dark:bg-black flex justify-center" id='faq' data-aos="fade-up" data-aos-anchor-placement="top-center">
       <div className="mt-10 w-[95%] md:w-[60%] dark:text-white relative">
         <h2 className="text-center mb-10">Frequently Asked Questions</h2>
+        <div>
         <h6 className="font-bold text-[#2E3192] text-center md:text-left">What is GridApe?</h6>
         <div className="border-b border-b-[#00C165]">
         <p className="text-base font-normal py-4">
@@ -42,6 +43,7 @@ const FAQ = () => {
               onClick={() => handleToggle(index)}
             />
           ))}
+        </div>
         </div>
       </div>
     </div>

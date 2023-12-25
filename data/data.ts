@@ -1,14 +1,14 @@
 import { FAQItem, WaitlistLink } from "@/interfaces/types"
 export const waitlistLinks: WaitlistLink[] = [
-  { name: "Why GridApe", link: "#description" },
-  { name: "FAQ", link: "#faq" },
-  { name: "Terms & Conditions", link: "#" },
+  { name: "Why GridApe", link: "#description", id: "description" },
+  { name: "FAQ", link: "#faq", id: "faq" },
+  { name: "Terms & Conditions", link: "#", id:"t&c" },
 ]
 
 export const footerSocialLinks: WaitlistLink[] = [
-  { name: "/svg/facebook.svg", link: "#" },
-  { name: "/svg/twitter.svg", link: "#" },
-  { name: "/svg/linkdin.svg", link: "#" },
+  { name: "/svg/facebook.svg", link: "#", id: "" },
+  { name: "/svg/twitter.svg", link: "#", id: "" },
+  { name: "/svg/linkdin.svg", link: "#", id: "" },
 ]
 
 export const faqData: FAQItem[] = [

@@ -1,6 +1,7 @@
 export interface WaitlistLink {
     name: string;
     link: string;
+    id : string;
   }
   export interface MobileNavProps {
     isOpen: boolean;
