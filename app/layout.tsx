@@ -4,8 +4,6 @@ import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-import Header from '@/components/waitlist/Header';
-import Footer from '@/components/waitlist/Footer';
 import { Toaster } from "react-hot-toast";
 
 // Define Inter font with Latin subset
@@ -48,10 +46,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           > */}
-        <Header />
         {children}
         {/* </ThemeProvider> */}
-        <Footer />
       </body>
     </html>
   );
