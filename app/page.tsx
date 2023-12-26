@@ -1,34 +1,38 @@
-'use client'
+"use client"
+// Import necessary components and dependencies
 import FAQ from "@/components/waitlist/FAQ/FAQ";
 import Hero from "@/components/waitlist/Hero";
 import WaitlistForm from "@/components/waitlist/WaitlistForm";
 import WhyGridApe from "@/components/waitlist/WhyGridApe";
 import React, { useEffect, useState } from "react"
-import './globals.css'
 import Loader from "@/components/Loader";
 
+// Functional component for the Page
+const Page = () => {
+  // State to manage loading state
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  
+  // Effect to simulate a delay and set loading to false
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setIsLoading(false);
+      clearTimeout(delay);
+    }, 2000);
+  }, []);
 
-const page = () => {
-	const [isLoading, setIsLoading] = useState<Boolean>(true)
-	
-	useEffect(() => {
-		const delay = setTimeout(() => {
-			setIsLoading(false);
-			clearTimeout(delay);
-		}, 2000);
-	}, []);
-
-	return (
-		<>
-			{isLoading &&
-				<Loader />
-			}
-			<Hero />
-			<WhyGridApe />
-			<WaitlistForm />
-			<FAQ />
-		</>
-	)
+  // TSX structure for the Page component
+  return (
+    <>
+      {isLoading &&
+        <Loader />
+      }
+      <Hero />
+      <WhyGridApe />
+      <WaitlistForm />
+      <FAQ />
+    </>
+  )
 }
 
-export default page;
+// Export the Page component as the default export
+export default Page;
