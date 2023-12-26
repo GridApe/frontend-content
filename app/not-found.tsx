@@ -8,9 +8,8 @@ const notFound = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-xxl-6 col-lg-7 m-auto">
-                        <h1>Opps! you're on the wrong place.</h1>
-                        <p className="me-xxl-5 ms-xxl-5 py-5">
-                            Unable to find what you're looking for? Begin your journey from our Homepage.
+                        <h1>Oops! You&apos;re on the wrong place.</h1>                        <p className="me-xxl-5 ms-xxl-5 py-5">
+                            Unable to find what you&apos;re looking for? Begin your journey from our Homepage.
                         </p>
                         <Link href="/" className="btn-sm mb-10 bg-[#2E3192] text-white whitespace-nowrap  ">
                             <Back size={20} /> Back to home
