@@ -40,10 +40,10 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           > */}
-        <Header />
+        {/* <Header /> */}
         {children}
         {/* </ThemeProvider> */}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )
