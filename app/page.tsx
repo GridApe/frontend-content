@@ -6,6 +6,8 @@ import WaitlistForm from "@/components/waitlist/WaitlistForm";
 import WhyGridApe from "@/components/waitlist/WhyGridApe";
 import React, { useEffect, useState } from "react"
 import Loader from "@/components/Loader";
+import Header from "@/components/waitlist/Header";
+import Footer from "@/components/waitlist/Footer";
 
 // Functional component for the Page
 const Page = () => {
@@ -26,10 +28,12 @@ const Page = () => {
       {isLoading &&
         <Loader />
       }
+      <Header />
       <Hero />
       <WhyGridApe />
       <WaitlistForm />
       <FAQ />
+      <Footer />
     </>
   )
 }
