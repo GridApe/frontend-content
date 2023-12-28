@@ -26,7 +26,7 @@ const Page = () => {
   return (
     <>
       {isLoading &&
-        <Loader />
+        <Loader color='border-[#2E3192]' />
       }
       <Header />
       <Hero />
