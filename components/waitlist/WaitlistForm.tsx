@@ -8,6 +8,7 @@ import AOS from 'aos';
 import "aos/dist/aos.css"
 import * as z from "zod";
 import { toast } from 'react-hot-toast';
+import Loader from "@/components/Loader";
 
 // Define email schema using zod for validation
 const emailSchema = z.string().email('Must be a valid email address');
@@ -17,6 +18,7 @@ const WaitlistForm = () => {
   // State for storing email and error message
   const [email, setEmail] = useState('');
   const [errorMessage, setErrorMessage] = useState(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   // Background style for the form section
   const BgStyle: bgStyle = {
@@ -42,6 +44,7 @@ const WaitlistForm = () => {
 
   // Handle form submission
   const handleSubmit = (e: any) => {
+    setIsLoading(true)
     e.preventDefault();
     try {
       // Validate email using the defined schema
@@ -51,10 +54,16 @@ const WaitlistForm = () => {
       setTimeout(() => {
         setEmail("")
       }, 100)
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 2000)
     } catch (error: any) {
       // Display error message if validation fails
       setErrorMessage(error.issues[0].message);
       toast.error(error.issues[0].message)
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 2000)
     }
   };
 
@@ -71,9 +80,12 @@ const WaitlistForm = () => {
           </p>
           <form className='flex justify-center px-5' onSubmit={handleSubmit}>
             <div className='flex justify-center items-center w-[80%] md:w-[35%] bg-white rounded-md'>
-              <Button className='py-6 bg-[#00C165] hover:bg-[#01CE6C] text-white border-[1px]' type='submit'>Notify me</Button>
+              <Button className='py-6 bg-[#00C165] hover:bg-[#01CE6C] text-white' type='submit' disabled={isLoading}>
+                {isLoading ? 'Submitting...' : 'Notify me'}
+              </Button>
+
               <Input
-                className={`focus:outline-none focus:border-none focus:ring-4 py-6 ${errorMessage ? 'border-red-500 border-[1px]' : ''}`}
+                className={`focus:outline-none focus:border-none focus:ring-4 py-6`}
                 type='email'
                 placeholder='Enter your email here'
                 value={email}
