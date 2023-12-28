@@ -1,5 +1,7 @@
-'use client'
+// 'use client'
  
-export default function myImageLoader({ src, width, quality } : any) {
-  return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`
-}
+// export default function myImageLoader({ src, width, quality } : any) {
+//     const url = window.location.href;
+//     console.log(url); 
+//   return `${url}${src}?w=${width}&q=${quality || 75}`
+// }
