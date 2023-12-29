@@ -9,7 +9,7 @@ const Hero = () => {
     return (
         <section className='w-full py-10 mb-2 md:mb-10 dark:bg-black flex justify-center'>
             <div className="flex flex-col justify-center w-[95%] md:w-[85%] items-center  dark:text-white relative">
-                <div className='heading mt-20'>
+                <div className='heading mt-[8rem]'>
                     <h1 className='text-center px-2'>
                         The ultimate platform for <br />
                         <span className='text-[#2E3192]'>elevating</span> your email <br />
