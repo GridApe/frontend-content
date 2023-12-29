@@ -10,23 +10,40 @@ export const waitlistLinks: WaitlistLink[] = [
 
 // Define an array of WaitlistLink objects for footer social links
 export const footerSocialLinks: WaitlistLink[] = [
-  { name: "/svg/facebook.svg", link: "#", id: "" },
-  { name: "/svg/twitter.svg", link: "#", id: "" },
-  { name: "/svg/linkedin.svg", link: "#", id: "" },
+  { name: "/svg/facebook.svg", link: "https://www.facebook.com/gridapehq", id: "" },
+  { name: "/svg/x.svg", link: "https://twitter.com/gridapehq", id: "" },
+  // { name: "/svg/linkedin.svg", link: "https://www.linkedin.com/company/gridapehq", id: "" },
+  { name: "/svg/instagram.svg", link: "https://www.instagram.com/gridapehq", id: "" },
 ]
 
 // Define an array of FAQItem objects for FAQ data
 export const faqData: FAQItem[] = [
   {
-    title: 'How does GridApe work?',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
+    title: 'How can GridApe benefit my business?',
+    content: 'GridApe simplifies the email marketing process, allowing you to craft engaging emails, create stunning landing pages, and connect with your audience effectively. The platform\'s AI features provide intelligent insights, making your marketing efforts more impactful and personalized.',
   },
   {
-    title: 'Is my personal information safe when I join the waitlist for GridApe?',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
+    title: 'What makes GridApe unique?',
+    content: 'GridApe stands out with its combination of intuitive design tools, AI-powered assistance, and future-ready features. Whether you\'re a seasoned marketer or just starting, GridApe offers a seamless and enjoyable experience, ensuring that your email campaigns are not only effective but also creatively captivating.',
   },
   {
-    title: 'Can I unsubscribe from the waitlist for GridApe?',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.',
-  }
+    title: 'How does the waitlist work?',
+    content: 'Joining the GridApe waitlist is simple. Just provide your email, and you\'ll be among the first to experience the power of GridApe when it becomes available. Waitlist members receive exclusive updates, early access opportunities, and insider information about new features.',
+  },
+  {
+    title: 'When will GridApe be available?',
+    content: 'We\'re working hard to bring GridApe to you as soon as possible. By joining the waitlist, you\'ll be among the first to know about our official launch date and gain early access privileges.'
+  },
+  {
+    title: 'Is there a cost to join the waitlist?',
+    content: 'No, joining the GridApe waitlist is completely free! As a member, you\'ll enjoy exclusive benefits and be part of our community before the official launch.'
+  },
+  {
+    title: 'Can I provide feedback during the waitlist period?',
+    content: 'Absolutely! We value your input. As a waitlist member, you\'ll have the opportunity to provide feedback, share your thoughts, and help shape the future of GridApe. Your insights are crucial to making GridApe the best it can be.'
+  },
+  {
+    title: 'How can I contact GridApe support?',
+    content: 'If you have any questions or need assistance, feel free to reach out to our support team at support@gridape.com. We\'re here to help you every step of the way.'
+  },
 ];
