@@ -30,10 +30,10 @@ const FAQ = () => {
       <div className="mt-10 w-[95%] md:w-[60%] dark:text-white relative">
         <h2 className="text-center mb-10">Frequently Asked Questions</h2>
         <div>
-        <h6 className="font-bold text-[#2E3192] text-center md:text-left">What is GridApe?</h6>
+        <h6 className="font-bold text-[#2E3192] text-center md:text-left">What is Gridape?</h6>
         <div className="border-b border-b-[#00C165]">
         <p className="text-base font-normal py-4">
-        GridApe is at the forefront of revolutionizing email marketing. 
+        Gridape is at the forefront of revolutionizing email marketing. 
         Our mission is to empower businesses to create impactful email campaigns effortlessly.
         </p>
         </div>
