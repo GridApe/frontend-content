@@ -5,7 +5,7 @@ import { FAQItem, WaitlistLink } from "@/interfaces/types"
 export const waitlistLinks: WaitlistLink[] = [
   { name: "Why Gridape", link: "#description", id: "description" },
   { name: "FAQ", link: "#faq", id: "faq" },
-  { name: "Terms & Conditions", link: "#", id: "t&c" },
+  // { name: "Terms & Conditions", link: "#", id: "t&c" },
 ]
 
 // Define an array of WaitlistLink objects for footer social links
