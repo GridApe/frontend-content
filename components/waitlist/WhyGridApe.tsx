@@ -30,7 +30,7 @@ const WhyGridape = () => {
                     </div>
                 </div>
                 <div className='bgImage' data-aos="fade-down">
-                    <Image src="/svg/whyGridape.svg" alt='why grid ape' width={1200} height={100} />
+                    <Image src="/svg/whyGridape.svg" alt='why grid ape' width={1000} height={100} />
                 </div>
                 <Image src="/svg/puzzle1.svg" alt='puzzle' width={50} height={50} className='absolute left-0 -bottom-2 hidden md:block -z-10' />
                 <Image src="/svg/puzzle1.svg" alt='puzzle' width={50} height={50} className='absolute left-60 -bottom-5 hidden md:block -z-10' />
