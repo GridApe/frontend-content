@@ -21,8 +21,8 @@ const clash = localFont({
 
 // Define metadata for the page
 export const metadata: Metadata = {
-  title: 'GridApe Waitlist',
-  description: 'GridApe is at the forefront of revolutionizing email marketing. Our mission is to empower businesses to create impactful email campaigns effortlessly.',
+  title: 'Gridape Waitlist',
+  description: 'Gridape is at the forefront of revolutionizing email marketing. Our mission is to empower businesses to create impactful email campaigns effortlessly.',
   icons: {
     icon: ['/favicon_io/favicon.ico?v4'],
     apple: ['/favicon_io/apple-touch-icon.png']
