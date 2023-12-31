@@ -8,13 +8,12 @@ import React, { useEffect, useState } from "react"
 import Loader from "@/components/Loader";
 import Header from "@/components/waitlist/Header";
 import Footer from "@/components/waitlist/Footer";
-import LoadingSkeleton from "@/components/LoadingSkeleton";
 
 // Functional component for the Page
 const Page = () => {
   // State to manage loading state
   const [isLoading, setIsLoading] = useState<boolean>(true);
-
+  
   // Effect to simulate a delay and set loading to false
   useEffect(() => {
     const delay = setTimeout(() => {
@@ -26,18 +25,15 @@ const Page = () => {
   // TSX structure for the Page component
   return (
     <>
-      {isLoading ?
-        <Loader color='border-[#2E3192]' /> :
-        <>
-          <Header />
-          <Hero />
-          <WhyGridApe />
-          <WaitlistForm />
-          <FAQ />
-          <Footer />
-
-        </>
+      {isLoading &&
+        <Loader color='border-[#2E3192]' />
       }
+      <Header />
+      <Hero />
+      <WhyGridApe />
+      <WaitlistForm />
+      <FAQ />
+      <Footer />
     </>
   )
 }
