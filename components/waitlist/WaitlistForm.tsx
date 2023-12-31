@@ -92,7 +92,6 @@ const WaitlistForm = () => {
               </Button>
               <Input
                 className={`focus:outline-none focus:border-none focus:ring-4 py-6`}
-                type='email'
                 placeholder='Enter your email here'
                 value={email}
                 onChange={handleChange} />
