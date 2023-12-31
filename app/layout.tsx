@@ -38,7 +38,7 @@ export default function RootLayout({
   // TSX structure for the RootLayout component
   return (
     <html lang="en" suppressHydrationWarning >
-      <body className={`bg-[#FFFAE9] ${clash.className}`}>
+      <body className={`bg-[#fafafa] ${clash.className}`}>
         <Toaster position="top-right" reverseOrder={false} />
         {/* <ThemeProvider
             attribute="class"

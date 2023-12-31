@@ -52,7 +52,7 @@ const Header = () => {
 
   // TSX structure for the Header component
   return (
-    <header className={`w-full fixed z-50 py-3 dark:bg-black t0p-0 left-0 right-0 flex justify-center bg-[#FFFAE9] transition-transform duration-300 ease-in-out
+    <header className={`w-full fixed z-50 py-3 dark:bg-black t0p-0 left-0 right-0 flex justify-center bg-[#fafafa] transition-transform duration-300 ease-in-out
      ${hasShadow ? 'shadow-md' : ''}`}>
       <nav className="flex justify-between w-[95%] md:w-[85%] items-center dark:text-white">
         <Link href="/">
