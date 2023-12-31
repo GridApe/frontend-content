@@ -16,7 +16,7 @@ const FAQItem = ({ title, content, isOpen, onClick }: any) => {
       </button>
       <div
         className={`accordion-content opacity-0 max-h-0 overflow-hidden transition-all duration-200 ease-linear ${
-          isOpen ? 'opacity-100 max-h-[20em]' : ''
+          isOpen ? 'opacity-100 max-h-[9em]' : ''
         }`}
       >
         <p className="text-base font-normal mt-4">{content}</p>
