@@ -31,7 +31,7 @@ const EmailUnsubscribePage = () => {
             <section className="relative h-screen flex items-center">
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl font-bold mb-4" data-aos="fade-up">
-                        <span className="text-[#2E3192]">Unsubscribe</span> from GridApe
+                        <span className="text-[#2E3192]">Unsubscribe</span> from Gridape
                     </h1>
                     <p className="text-lg text-gray-700 mb-8" data-aos="fade-up" data-aos-delay="200">
                         We&apos;re sorry to see you go. Please confirm your decision to unsubscribe.

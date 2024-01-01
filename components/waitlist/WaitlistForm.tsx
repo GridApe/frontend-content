@@ -76,7 +76,7 @@ const WaitlistForm = () => {
           <h1 className='text-center mb-5 leading-4 text-white'>Join our waitlist</h1>
           <p className='text-center mb-10 text-white px-2'>
             Ready to Craft, Connect, and Captivate?<br />
-            Try GridApe today and redefine your approach to email marketing.
+            Try Gridape today and redefine your approach to email marketing.
           </p>
           <form className='flex justify-center px-5' onSubmit={handleSubmit}>
             <div className='flex justify-center items-center w-[80%] md:w-[35%] bg-white rounded-md'>
