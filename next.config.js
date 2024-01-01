@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = { output: 'export', };
+const nextConfig = {};
 
 module.exports = nextConfig
 
-// module.exports = {
-//     images: {
-//         loader: 'custom',
-//         loaderFile: './lib/image/loader.ts',
-//       },
-// }
+module.exports = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+}

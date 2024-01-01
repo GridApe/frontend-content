@@ -9,10 +9,10 @@ const Hero = () => {
     return (
         <section className='w-full py-10 mb-2 md:mb-10 dark:bg-black flex justify-center'>
             <div className="flex flex-col justify-center w-[95%] md:w-[85%] items-center  dark:text-white relative">
-                <div className='heading mt-20'>
-                    <h1 className='text-center px-2'>
-                        The ultimate platform for <br />
-                        <span className='text-[#2E3192]'>elevating</span> your email <br />
+                <div className='heading mt-[5rem] md:mt-[8rem]'>
+                    <h1 className='text-center px-2 text-3xl sm:text-4xl md:text-5xl  font-bold'>
+                        The ultimate platform for <br className='hidden  md:block'/>
+                        <span className='text-[#2E3192]'>elevating</span> your email <br className='hidden sm:block'/>
                         marketing game!
                     </h1>
                 </div>
