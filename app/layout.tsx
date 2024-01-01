@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: 'Gridape Waitlist',
   description: 'Gridape is at the forefront of revolutionizing email marketing. Our mission is to empower businesses to create impactful email campaigns effortlessly.',
   icons: {
-    icon: ['/favicon_io/favicon.ico?v4'],
+    icon: ['/favicon_io/android-chrome-512x512.png'],
     apple: ['/favicon_io/apple-touch-icon.png']
   }
 };
