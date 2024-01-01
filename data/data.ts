@@ -10,10 +10,10 @@ export const waitlistLinks: WaitlistLink[] = [
 
 // Define an array of WaitlistLink objects for footer social links
 export const footerSocialLinks: WaitlistLink[] = [
-  { name: "/svg/facebook.svg", link: "https://www.facebook.com/Gridapehq", id: "" },
-  { name: "/svg/x.svg", link: "https://twitter.com/Gridapehq", id: "" },
-  // { name: "/svg/linkedin.svg", link: "https://www.linkedin.com/company/Gridapehq", id: "" },
-  { name: "/svg/instagram.svg", link: "https://www.instagram.com/Gridapehq", id: "" },
+  { name: "/svg/facebook.svg", link: "https://www.facebook.com/gridapehq", id: "" },
+  { name: "/svg/x.svg", link: "https://twitter.com/gridapehq", id: "" },
+  { name: "/svg/linkedin.svg", link: "https://www.linkedin.com/company/gridapehq", id: "" },
+  { name: "/svg/instagram.svg", link: "https://www.instagram.com/gridapehq", id: "" },
 ]
 
 // Define an array of FAQItem objects for FAQ data
