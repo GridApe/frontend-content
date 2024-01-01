@@ -54,7 +54,6 @@ const WaitlistForm = () => {
       const res = await joinWaitList(email);
       if (res.success) {
         toast.success(res.message);
-        console.log(res.data);
       } else {
         // Display error message
         setErrorMessage(res.message);
