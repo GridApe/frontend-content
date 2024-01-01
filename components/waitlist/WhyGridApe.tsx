@@ -10,10 +10,10 @@ const WhyGridape = () => {
     // Initialize AOS library on component mount
     useEffect(() => {
         AOS.init({
-          duration: 800,
-          easing: 'ease-in-out',
+            duration: 800,
+            easing: 'ease-in-out',
         });
-      }, []);
+    }, []);
 
     // TSX structure for the WhyGridape component
     return (
@@ -22,10 +22,10 @@ const WhyGridape = () => {
                 <div data-aos="fade-up">
                     <h2 className='text-[#2E3192] mb-3 text-center md:text-left'>Why Gridape</h2>
                     <div className='description px-2'>
-                       <p className="text-center md:text-justify mb-6 md:mb-10">Gridape is at the forefront of revolutionizing email marketing. Our mission is to empower businesses to create impactful email campaigns effortlessly.</p>
+                        <p className="text-center md:text-justify mb-6 md:mb-10">Gridape is at the forefront of revolutionizing email marketing. Our mission is to empower businesses to create impactful email campaigns effortlessly.</p>
 
                         <p className="text-center md:text-justify">Gridape is not just a tool.
-                         it is your partner in crafting compelling narratives that resonate with your audience. Whether you are a seasoned marketer or just starting, Gridape simplifies the complex, making email marketing an enjoyable and effective experience.</p>
+                            it is your partner in crafting compelling narratives that resonate with your audience. Whether you are a seasoned marketer or just starting, Gridape simplifies the complex, making email marketing an enjoyable and effective experience.</p>
 
                     </div>
                 </div>
