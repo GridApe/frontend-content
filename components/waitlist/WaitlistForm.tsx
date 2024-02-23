@@ -73,10 +73,10 @@ const WaitlistForm = () => {
   //   }
   // };
 
-  const handleSubmitNew = (event : any) => {
+  const handleSubmitNew = (event: Event) => {
   event.preventDefault();
 
-  const myForm = event.target;
+  const myForm = event.target as HTMLFormElement;
   const formData = new FormData(myForm);
   
   fetch("/", {
