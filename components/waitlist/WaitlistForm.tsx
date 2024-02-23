@@ -79,14 +79,20 @@ const WaitlistForm = () => {
   const myForm = event.target as HTMLFormElement;
   const formData = new FormData(myForm);
   
+  const formDataUrlEncoded = new URLSearchParams();
+  for (const [key, value] of formData.entries()) {
+    formDataUrlEncoded.append(key, value as string);
+  }
+
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
+    body: formDataUrlEncoded.toString(),
   })
     .then(() => console.log("Form successfully submitted"))
     .catch((error) => alert(error));
 };
+
 
 // document
 //   .querySelector("form")
