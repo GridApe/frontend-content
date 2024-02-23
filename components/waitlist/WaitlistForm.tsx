@@ -104,11 +104,12 @@ const WaitlistForm = () => {
             Ready to Craft, Connect, and Captivate?<br />
             Try Gridape today and redefine your approach to email marketing.
           </p>
-          <form className='flex justify-center px-5' onSubmit={handleSubmitNew} data-netlify="true">
+          <form className='flex justify-center px-5' method="post" onSubmit={handleSubmitNew} data-netlify="true">
             <div className='flex justify-center items-center w-[80%] md:w-[35%] bg-white rounded-md'>
               <Button className='py-6 bg-[#00C165] hover:bg-[#01CE6C] text-white' type='submit' disabled={isLoading}>
                 {isLoading ? 'Submitting...' : 'Notify me'}
               </Button>
+              <input type="hidden" name="form-name" value="pizzaOrder" />
               <Input
                 type="email"
                 className={`focus:outline-none focus:border-none focus:ring-4 py-6`}
