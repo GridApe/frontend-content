@@ -73,7 +73,7 @@ const WaitlistForm = () => {
   //   }
   // };
 
-  const handleSubmitNew = (event) => {
+  const handleSubmitNew = (event : any) => {
   event.preventDefault();
 
   const myForm = event.target;
