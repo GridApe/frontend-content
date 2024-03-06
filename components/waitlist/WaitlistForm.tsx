@@ -42,62 +42,37 @@ const WaitlistForm = () => {
   };
 
   // Handle form submission
-  // const handleSubmit = async (e: any) => {
-  //   e.preventDefault();
-  //   setIsLoading(true);
-  //   setTimeout(() => {
-  //     setEmail("");
-  //   }, 100);
-  //   try {
-  //     // Validate email using the defined schema
-  //     emailSchema.parse(email);
-  //     const res = await joinWaitList(email);
-  //     if (res.success) {
-  //       toast.success(res.message);
-  //     } else {
-  //       // Display error message
-  //       setErrorMessage(res.message);
-  //       toast.error(res.message);
-  //       console.log(res.message);
-  //     }
-  //   } catch (error: any) {
-  //     // Display error message if validation fails
-  //     console.log(error);
-  //     setErrorMessage(error.issues ? error.issues[0].message : 'Invalid email');
-  //     toast.error(error.issues ? error.issues[0].message : 'Invalid email');
-  //   } finally {
-  //     // Set loading to false after a delay
-  //     setTimeout(() => {
-  //       setIsLoading(false);
-  //     }, 2000);
-  //   }
-  // };
-
-  const handleSubmitNew = (event: Event) => {
-  event.preventDefault();
-
-  const myForm = event.target as HTMLFormElement;
-  const formData = new FormData(myForm);
-  
-  const formDataUrlEncoded = new URLSearchParams();
-  for (const [key, value] of formData.entries()) {
-    formDataUrlEncoded.append(key, value as string);
-  }
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: formDataUrlEncoded.toString(),
-  })
-    .then(() => console.log("Form successfully submitted"))
-    .catch((error) => alert(error));
-};
-
-
-// document
-//   .querySelector("form")
-//   .addEventListener("submit", handleSubmitNew);
-
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setTimeout(() => {
+      setEmail("");
+    }, 100);
+    try {
+      // Validate email using the defined schema
+      emailSchema.parse(email);
+      const res = await joinWaitList(email);
+      if (res.success) {
+        toast.success(res.message);
+        console.log(res.data);
+      } else {
+        // Display error message
+        setErrorMessage(res.message);
+        toast.error(res.message);
+        console.log(res.message);
+      }
+    } catch (error: any) {
+      // Display error message if validation fails
+      console.log(error);
+      setErrorMessage(error.issues ? error.issues[0].message : 'Invalid email');
+      toast.error(error.issues ? error.issues[0].message : 'Invalid email');
+    } finally {
+      // Set loading to false after a delay
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+    }
+  };
 
   // JSX structure for the WaitlistForm component
   return (
@@ -110,16 +85,18 @@ const WaitlistForm = () => {
             Ready to Craft, Connect, and Captivate?<br />
             Try Gridape today and redefine your approach to email marketing.
           </p>
-          <form className='flex justify-center px-5' method="post" onSubmit={handleSubmitNew} data-netlify="true">
+          <form className='flex justify-center px-5'  method='POST' name="contact" data-netlify="true" netlify-honeypot="bot-field">
             <div className='flex justify-center items-center w-[80%] md:w-[35%] bg-white rounded-md'>
-              <Button className='py-6 bg-[#00C165] hover:bg-[#01CE6C] text-white' type='submit' disabled={isLoading}>
-                {isLoading ? 'Submitting...' : 'Notify me'}
+              <Button className='py-6 bg-[#00C165] hover:bg-[#01CE6C] text-white' type='submit'>
+                Notify me
               </Button>
-              <input type="hidden" name="form-name" value="pizzaOrder" />
+              <input type="hidden" name="form-name" value="contact" />
               <Input
-                type="email"
                 className={`focus:outline-none focus:border-none focus:ring-4 py-6`}
-                placeholder='Enter your email here' />
+                id='email'
+                placeholder='Enter your email here'
+                name="email"
+                />
             </div>
           </form>
         </div>
