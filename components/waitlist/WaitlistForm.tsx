@@ -8,6 +8,9 @@ import "aos/dist/aos.css";
 import * as z from "zod";
 import { toast } from 'react-hot-toast';
 import { joinWaitList } from '@/http/api/axios';
+import addEmailToFirebase from '@/firebase/addEmail';
+
+
 
 // Define email schema using zod for validation
 const emailSchema = z.string().email('Must be a valid email address');
@@ -16,7 +19,7 @@ const emailSchema = z.string().email('Must be a valid email address');
 const WaitlistForm = () => {
   // State for storing email and error message
   const [email, setEmail] = useState('');
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   // Background style for the form section
@@ -38,40 +41,44 @@ const WaitlistForm = () => {
   // Handle input change
   const handleChange = (e: any) => {
     setEmail(e.target.value);
-    setErrorMessage(null);
+    setErrorMessage("");
   };
 
-  // Handle form submission
+
+  //Firebase form submission
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsLoading(true);
-    setTimeout(() => {
-      setEmail("");
-    }, 100);
+
+    const isValidEmail = validateEmail(email);
+    if (!isValidEmail) {
+      setIsLoading(false);
+      toast.error('Please enter a valid email address.');
+      return;
+    }
+    if (!email.trim()) {
+      setIsLoading(false);
+      toast.error('Please enter your email address.');
+      return;
+    }
+
     try {
-      // Validate email using the defined schema
-      emailSchema.parse(email);
-      const res = await joinWaitList(email);
-      if (res.success) {
-        toast.success(res.message);
-        console.log(res.data);
+      const res = await addEmailToFirebase(email);
+      if (res) {
+        toast.success("Joined Successfully");
       } else {
-        // Display error message
-        setErrorMessage(res.message);
-        toast.error(res.message);
-        console.log(res.message);
+        toast.error("Input is Empty");
       }
     } catch (error: any) {
-      // Display error message if validation fails
-      console.log(error);
       setErrorMessage(error.issues ? error.issues[0].message : 'Invalid email');
       toast.error(error.issues ? error.issues[0].message : 'Invalid email');
     } finally {
-      // Set loading to false after a delay
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 2000);
+      setIsLoading(false);
     }
+  };
+  const validateEmail = (email: string) => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
   };
 
   // JSX structure for the WaitlistForm component
@@ -85,18 +92,16 @@ const WaitlistForm = () => {
             Ready to Craft, Connect, and Captivate?<br />
             Try Gridape today and redefine your approach to email marketing.
           </p>
-          <form className='flex justify-center px-5'  method='POST' name="contact" data-netlify="true" netlify-honeypot="bot-field">
+          <form className='flex justify-center px-5' onSubmit={handleSubmit}>
             <div className='flex justify-center items-center w-[80%] md:w-[35%] bg-white rounded-md'>
-              <Button className='py-6 bg-[#00C165] hover:bg-[#01CE6C] text-white' type='submit'>
-                Notify me
+              <Button className='py-6 bg-[#00C165] hover:bg-[#01CE6C] text-white' type='submit' disabled={isLoading}>
+                {isLoading ? 'Submitting...' : 'Notify me'}
               </Button>
-              <input type="hidden" name="form-name" value="contact" />
               <Input
                 className={`focus:outline-none focus:border-none focus:ring-4 py-6`}
-                id='email'
                 placeholder='Enter your email here'
-                name="email"
-                />
+                value={email}
+                onChange={handleChange} />
             </div>
           </form>
         </div>
