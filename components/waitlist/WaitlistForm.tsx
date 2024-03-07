@@ -85,7 +85,7 @@ const WaitlistForm = () => {
             Ready to Craft, Connect, and Captivate?<br />
             Try Gridape today and redefine your approach to email marketing.
           </p>
-          <form className='flex justify-center px-5'  method='post' name="contact" data-netlify="true">
+          <form className='flex justify-center px-5'  method='POST' name="contact" data-netlify="true" netlify-honeypot="bot-field">
             <div className='flex justify-center items-center w-[80%] md:w-[35%] bg-white rounded-md'>
               <Button className='py-6 bg-[#00C165] hover:bg-[#01CE6C] text-white' type='submit'>
                 Notify me
