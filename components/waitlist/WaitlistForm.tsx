@@ -68,7 +68,7 @@ const WaitlistForm = () => {
         toast.success("Joined Successfully");
         setEmail("")
       } else {
-        toast.error("Input is Empty");
+        toast.error("Email already exist or Input Emtpy");
       }
     } catch (error: any) {
       setErrorMessage(error.issues ? error.issues[0].message : 'Invalid email');
