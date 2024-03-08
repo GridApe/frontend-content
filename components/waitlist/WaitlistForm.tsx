@@ -66,12 +66,14 @@ const WaitlistForm = () => {
       const res = await addEmailToFirebase(email);
       if (res) {
         toast.success("Joined Successfully");
+        setEmail("")
       } else {
         toast.error("Input is Empty");
       }
     } catch (error: any) {
       setErrorMessage(error.issues ? error.issues[0].message : 'Invalid email');
       toast.error(error.issues ? error.issues[0].message : 'Invalid email');
+      setEmail("")
     } finally {
       setIsLoading(false);
     }
