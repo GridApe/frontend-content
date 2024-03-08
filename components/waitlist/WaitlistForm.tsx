@@ -103,6 +103,7 @@ const WaitlistForm = () => {
                 className={`focus:outline-none focus:border-none focus:ring-4 py-6`}
                 placeholder='Enter your email here'
                 value={email}
+                type='email'
                 onChange={handleChange} />
             </div>
           </form>
