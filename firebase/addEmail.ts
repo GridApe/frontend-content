@@ -1,15 +1,12 @@
 import { db } from '@/firebase/firebase';
 import { collection, query, where, getDocs, addDoc } from 'firebase/firestore';
-import toast from 'react-hot-toast';
 
 const addEmailToFirebase = async (email: string) => {
     try {
         const emailQuery = query(collection(db, "email"), where("email", "==", email));
         const querySnapshot = await getDocs(emailQuery);
         if (!querySnapshot.empty) {
-            toast.error("Email already exists!");
             console.log("Email already exists!");
-            
             return false;
         }
         const docRef = await addDoc(collection(db, "email"), {
