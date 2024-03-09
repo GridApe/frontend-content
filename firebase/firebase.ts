@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCagydmoRBhaUCYLzuYXJYXH7odvW528rI",
-  authDomain: "grid-4253e.firebaseapp.com",
-  projectId: "grid-4253e",
-  storageBucket: "grid-4253e.appspot.com",
-  messagingSenderId: "1040543968745",
-  appId: "1:1040543968745:web:2f0929a53d84c4546b6f78"
+   apiKey: "AIzaSyCHnWeHsMKwlflK0VBxEVgQmJiFL5LBXUY",
+  authDomain: "gridape-e1675.firebaseapp.com",
+  projectId: "gridape-e1675",
+  storageBucket: "gridape-e1675.appspot.com",
+  messagingSenderId: "369533664726",
+  appId: "1:369533664726:web:ec0341c4fbfd11944c7877"
 };
 
 // Initialize Firebase
